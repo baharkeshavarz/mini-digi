@@ -1,5 +1,6 @@
 import React from "react";
 import { PostItem } from "../page";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -10,6 +11,10 @@ export default async function Page({
 
   const data = await fetch(`https://api.vercel.app/blog/${id}`);
   const post: PostItem = await data.json();
+
+  if (id > 1000) {
+    return notFound();
+  }
 
   return (
     <div>
