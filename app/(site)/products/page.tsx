@@ -7,12 +7,12 @@ export interface PostItem {
 
 export default async function Page() {
   const data = await fetch("https://api.vercel.app/blog");
-  const posts: PostItem[] = await data.json();
+  const products: PostItem[] = await data.json();
   return (
     <ul>
-      {posts.map((post) => (
-        <li key={post.id}>
-          <Link href={`posts/${post.id}`}>{post.title}</Link>
+      {products.map((product) => (
+        <li key={product.id}>
+          <Link href={`products/${product.id}`}>{product.title}</Link>
         </li>
       ))}
     </ul>
