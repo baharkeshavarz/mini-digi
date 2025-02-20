@@ -1,12 +1,22 @@
 import React from "react";
 import { PostItem } from "../page";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
-export default async function Page({
-  params,
-}: {
+type Props = {
   params: Promise<{ productId: number }>;
-}) {
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { productId } = await params;
+  return {
+    title: `Product No ${productId}`,
+  };
+};
+
+export default async function ProductDetails({ params }: Props) {
   const id = (await params).productId;
 
   const data = await fetch(`https://api.vercel.app/blog/${id}`);

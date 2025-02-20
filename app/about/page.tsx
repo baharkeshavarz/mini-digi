@@ -1,8 +1,13 @@
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About Me",
+};
 
 const page = () => {
   return (
-    <div>
+    <div className="h-[600]">
       <h5> About US</h5>
       <p>
         About to popular belief, Lorem Ipsum is not simply random text. It has
