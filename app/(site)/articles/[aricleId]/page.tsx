@@ -15,7 +15,7 @@ export default async function Page({
   params: Promise<{ aricleId: number }>;
 }) {
   const id = (await params).aricleId;
-
+ 
   const data = await fetch(`https://api.vercel.app/blog/${id}`);
   const post: ArticleItem = await data.json();
 

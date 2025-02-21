@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -9,6 +10,11 @@ const page = () => {
   return (
     <div className="h-[600]">
       <h5> About US</h5>
+      <div className="p-2 m-2">
+        <Link href="/products" replace={true} className=" text-black text-2xl">
+          Product List
+        </Link>
+      </div>
       <p>
         About to popular belief, Lorem Ipsum is not simply random text. It has
         roots in a piece of classical Latin literature from 45 BC, making it
