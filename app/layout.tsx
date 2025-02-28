@@ -41,6 +41,9 @@ export default function RootLayout({
           <Link href="/articles">articles</Link>
           <br />
           <br />
+          <Link href="/server-client">server client</Link>
+          <br />
+          <br />
           <Link href="/server">server</Link>
         </div>
         {children}
