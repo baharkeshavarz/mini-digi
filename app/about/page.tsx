@@ -3,10 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "About Me"
 };
 
 const page = () => {
+  console.log("About Server Side In Action as well");
   return (
     <div className="h-[600]">
       <h5> About US</h5>
